@@ -12,7 +12,7 @@
 
 
 
-<title>关于 | XpX的博客</title>
+<title>XpX的博客</title>
 
 
 
@@ -107,11 +107,73 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">关于</h1>
+            <h1 class="post-title"></h1>
             
                 <div class="post-meta">
                     
@@ -120,7 +182,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">一月 12, 2021&nbsp;&nbsp;22:28:52</a>
+                        Date: <a href="#">十月 10, 2022&nbsp;&nbsp;16:40:32</a>
                         </span>
                     
                     
@@ -129,7 +191,7 @@
         </header>
 
         <div class="post-content">
-            <p><img src="https://inbmx.com/imgs/2021/01/f418a0cb393822ec.png"><br>慎小慎微的去百度了究竟什么是“关于”。<br>因为站长知道，这个页面通常是给大的企业官网准备的，其内容主要是关于企业本身的一个简介——资质资历啊，软硬件设施啊，成功案例啊各种各种，概括起来就是咱们多厉害多厉害那种“商业自吹”。<br>而站长和站长身后这块个体工商户的营业执照都极其卑微，卑微得不值一提。以至于对这个页面一度无从下手，依旧讲讲关于芭茅溪吧。<br><img src="https://inbmx.com/imgs/2021/01/4bd265dad85a0848.png"><br>bamaoxi.com芭茅溪，是由桑植县芭茅溪广告科技文化传媒自费搭建的一个简单网站，旨在践行站长2012年写在qq签名档的那句话：“让更多人知道并了解芭茅溪”。2014年，与一众乡民一起排练土家风情舞蹈《澧水渔趣》，其间乡党委书记指导排练并和乡民愉悦聊天，大致聊到了我们脱产来排练舞蹈一定要认认真真争取拿个好成绩什么的，然后书记为使得我们更有积极性，拉家常聊到动力什么的，问我的时候我说了句：“因为我爱这土地爱得深沉”。当时引得大家一阵哄笑。但至今回忆起来，当时除了“幽默”，多少也算是肺腑之言。这个站得以建成，真正也算得上是情怀支撑。即便页面相当简陋，内容也很单薄，但是也耗费了站长不少的依情感驱动的心血，而且我相信，以后也会渐渐丰盈起来，就像芭茅溪的发展一样。<br>说到这里，似乎有些偏离主题，但这就是我酝酿良久想告诉您的关于芭茅溪的“关于”。<br>芭茅溪欢迎您，芭茅溪人民欢迎您。</p>
+            <h3 id="Markdown-基本语法"><a href="#Markdown-基本语法" class="headerlink" title="Markdown 基本语法"></a>Markdown 基本语法</h3><p>markdown是一种轻量级标记语言，排版语法简介，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与html混排，可导出html、pdf以及本身的.md格式的文件。因简洁、高效、易读、易写、markdown被大量使用，如GIthub、Wikipedia、简书等。</p>
 
         </div>
 
@@ -162,10 +224,6 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
-                    
-                        <a href="/tags/%E5%BB%BA%E7%AB%99%E6%97%A5%E8%AE%B0/"># 建站日记</a>
-                    
-                        
                 </span>
             </div>
             <div>
@@ -176,10 +234,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/10/10/MWebLibrary/docs/16653912327460/"></a>
+                <a class="prev" rel="prev" href="/2022/10/10/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">markdown基础语法</a>
             
             
-            <a class="next" rel="next" href="/2021/01/10/%E5%AD%A6%E4%B9%A0html/">学习html</a>
+            <a class="next" rel="next" href="/2021/01/12/%E5%85%B3%E4%BA%8E/">关于</a>
             
         </section>
 
