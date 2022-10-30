@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="XpX">
+
+
+
+
+
+<title>Markdown是什么 | XpX的博客</title>
+
+
+
+    <link rel="icon" href="/image/32x32favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">XpX&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">博文</a>
+                
+                    <a class="menu-item" href="/category">分类</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">XpX&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">博文</a>
+                
+                    <a class="menu-item" href="/category">分类</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Markdown是什么</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">XpX</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">十月 30, 2022&nbsp;&nbsp;20:59:57</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="Markdown是什么？"><a href="#Markdown是什么？" class="headerlink" title="Markdown是什么？"></a>Markdown是什么？</h1><p>Markdown是一种轻量级的标记语言，可用于在纯文本文档中添加格式化元素，Markdown由John Gruber 于2004年创建，如今已成为世界上最受欢迎的标记语言之一。</p>
+<ol>
+<li>专注于文字内容；</li>
+<li>纯文本，易读易写，可以方便的纳入版本控制；</li>
+<li>语法简单，没有什么学习成本，能轻松在码字的同时做出美观大方的排版。</li>
+</ol>
+<p>使用Markdown与使用word类编辑器不同，在Word中之类的应用程序中，单击按钮以设置单词和短语的格式，并且，更改立即可见。而Markdown与此不同，当你创建Markdown格式的文件时，可以在文本中添加Markdown语法，以指示哪些单词和短语看起来应该有所不同。<br>例如，要表示标题，只需要在短语前面添加一个并号即可（例如 # heading One）；或者要加粗一个短语，只需在短语前后各加两个星号即可。（例如，<strong>this text is bold</strong>）。可能，需要一段时间才能习惯在文本中看到Markdown语法，尤其是如果你已经习惯了所见即所得的应用程序。<br>你可以使用文本编辑器为纯文本文件添加Markdown格式的元素。或者，你也可以安装针对macOS、Windows、Linux、ios和Android操作系统的Markdown应用程序。或者还可以使用一些基于Web的应用程序用于Markdown编写。<br>依赖于你所使用的应用程序、你可能无法实现预览格式化的文档；但是没关系。根据Gruber的说法，Markdown的语法设计为可读性强且不显眼，因此即使Markdown文件中的文本未经过渲染也易于阅读。</p>
+<blockquote>
+<p>Markdown语法的首要设计目标是尽可能易读。基于这个目标，Markdown格式的文档能够以纯文本形式原样发布，而不会看起来像被填满了标签或格式化命令。</p>
+</blockquote>
+<h1 id="为什么要使用Markdown？"><a href="#为什么要使用Markdown？" class="headerlink" title="为什么要使用Markdown？"></a>为什么要使用Markdown？</h1><p>当你可以通过按下界面中的按钮来设置文本格式时，为什么还要使用Markdown来书写呢？使用Markdown而不是word文档的原因有：</p>
+<ul>
+<li>Markdown无处不在。StackOverflow、CSDN、掘金、简书、GitBook、有道云笔记、V2EX、光谷社区等。主流的代码托管平台，如GitHub、GitLab、BitBucket、Coding、Gitee等等，都支持Markdown语法，很多开源项目的README、开发文档、帮助文档、WiKi等都用Markdown写作。</li>
+<li>Makrdown是纯文本可移植的。几乎可以使用任何应用程序打开包含Markdown格式的文本文件。如果你不喜欢当前使用的Markdown应用程序了，泽可以将Markdown文件导入另一个Markdown应用程序中。这与Microsoft Word等文件处理应用程序形成了鲜明的对比，Microsoft Word将你的内容锁定在专有文件格式中。</li>
+<li>Markdown是独立于平台的。你可以在运行任何操作系统的任何设备上创建Markdown格式的文本。</li>
+<li>Markdown能适应未来的变化。即使你正在使用的应用程序将来会在某个时候不能使用了，你仍然可以使用文本编辑器都去Markdown格式的文本。当涉及需要无限期保存的书籍、大学论文和其他里程碑式的文件时，这是一个重要的考虑因素。</li>
+</ul>
+<h1 id="工欲善其事，必先利其器"><a href="#工欲善其事，必先利其器" class="headerlink" title="工欲善其事，必先利其器"></a>工欲善其事，必先利其器</h1><p>Markdown入门的最佳方式就是多使用它。由于有大量免费的工具存在，上手Markdown是很方便的。比较遗憾的一点是各平台可能采用不同语言实现的Markdown解析引擎，或采用同一引擎的不同版本，而且可能有不同程度的定制与扩展，这导致在不同平台上使用Markdown写作时体验不完全一致。不过幸好对于大家公认的一些标准语法，各家都是支持的。<br>你甚至都不需要下载任何程序，就可以使用在线Markdown编辑器来编写Markdown。进入其站点就恶意开始在左侧框格中书写了。渲染后的文档在右侧框格预览。<br>乐队文本指南时，你可以打开在线Markdown编辑器，这样，你就可以一边学习Markdown语法一边练习了。熟悉Markdown之后，再选择一个顺手的Markdown的应用程序。</p>
+<h1 id="Markdown的工作原理"><a href="#Markdown的工作原理" class="headerlink" title="Markdown的工作原理"></a>Markdown的工作原理</h1><p>在使用Markdown格式书写时，文本内容存储在带有 <code>.md</code> 或者<code>.markdown</code>扩展名的纯文本文件中，那然后呢？你的Markdown格式的文件如何转化为Html或者可打印的文档呢？<br>简单来说，你需要一个能够处理Markdown文件的 <em>makrdown</em>应用程序。有许多应用程序可供选择，从简单的脚本到类似于Microsoft Word的桌面应用程序。尽管他们在视觉上有所不同，但所有应用程序都执行相同的操作，像在线Markdown编辑器一样，他们都是将Mardown格式的文本转化为HTML，以便可以在Web浏览器中显示。<br>注意：Markdown应用程序和处理器是两个单独的组。</p>
+<ol>
+<li>使用文本编辑器或Markdown专用的应用程序创建Markdown文件。该文件应该带有<code>.md</code>或<code>.markdown</code>扩展名。</li>
+<li>在Markdown应用程序中打开Markdown文件。</li>
+<li>使用Markdown应用程序将Markdown文件转化为HTML文档。</li>
+<li>在web浏览器中查看HTML文件，或者使用Markdown应用程序将其转化为其他文件格式，例如PDF。<br>从你的角度来看，该过程将根据你使用的应用程序的不同而有所不同。例如，在线Markdown编辑器本质上将1-3个步骤组合到一个单一、无缝的界面中，你要做的就是在左框格中输入内容，然后转换结果就在右框格中神奇地出现了。但是，如果你使用的是其他工具（例如带有静态网站生成器的文本编辑器），则会发现该过程更为明显。</li>
+</ol>
+<h1 id="Markdown有什么用？"><a href="#Markdown有什么用？" class="headerlink" title="Markdown有什么用？"></a>Markdown有什么用？</h1><p>Markdown是左笔记、为网站创建内容以及生成可打印文档的快速、简便的方法。<br>学习Markdown语法并不需要很长时间，一旦你知道如何使用它，你就可以在几乎所有地方使用Markdown进行书写了，大多数人使用Markdown莱薇网站创建内容，但是Markdown也可以很好的格式化从电子邮件到购物清单的所有内容。<br>下面是一些你可以使用Markdown的场景。</p>
+<h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><p>Markdown是为web而设计的， 因此，市面上有很多专门用于创建网站内容的应用程序就不足为奇了。<br>如果你熟悉HTML、CSS版本管理工具，请试试「JekyII」，这是一个广受欢迎的静态网站生成器，它能将Markdown文件并构建为HTML网站，这种方法的优势之一是「GitHub Pages」为JekyII生成的网站提供免费托管服务。如果JekyII不是你的理想之选。<br>如果你是Wordpress博主，你可以使用Jetpack插件实现对Markdown的支持。</p>
+<h2 id="文件资料"><a href="#文件资料" class="headerlink" title="文件资料"></a>文件资料</h2><p>Markdown并不具备像Microsoft Word这样的文字处理程序的所有功能，但对于创建基本文件（例如作业和信件）来说已经足够了。你可以使用Markdown文档创作工具来创建Markdown格式的文档并将其导出为PDF或者HTML格式。PDF格式是关键，因为一旦有了PDF文档，您就可以使用它进行任何操作：打印、通过电子邮件发送或将其上传到网站。<br>这是我推荐的一些Markdown文档创作工具：</p>
+<ul>
+<li>现代编辑器<br>VSCode&#x2F;Atom</li>
+<li>传统编辑器<br>Vim&#x2F;Emacs&#x2F;Sublime Text&#x2F;Notepad++</li>
+<li>IDE自带编辑器<br>InteliJ IDEA&#x2F;Android Studio&#x2F;WebStorm</li>
+<li>专用编辑器<br>Ulysses&#x2F;Mou&#x2F;Typora&#x2F;Markpad</li>
+<li>在线编辑器<br>各种支持Markdown的网站都提供了Markdown编辑器。</li>
+</ul>
+<h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><p>在几乎所有方面，Markdown都是记笔记的理想语法。不幸的是，两个最受欢迎的笔记应用程序Evernote和OneNote目前都不支持Markdown。好消息是，其他一些笔记应用程序是<em>支持</em>Markdown的：</p>
+<ul>
+<li>「Simplenote」是适用于所有平台的免费、简单的笔记应用程序。</li>
+<li>「Notable」是可以在各种平台上运行的笔记应用程序。</li>
+<li>「Bear」是适用于Mac和ios设备的类似Evernote的应用程序。默认情况下，它并不专门针对Markdown的，但是你可以启用Markdown兼容模式。</li>
+<li>「Boostnote」自称是“专为程序员设计的开源笔记应用程序”。<br>如果你无法放弃Evernote，可以试试Marxico，一个专门针对Evernote的基于订阅付费的Markdown编辑器，或者在Evernote网站上使用「Markdown Here」插件。</li>
+</ul>
+<h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>想要自行出版小说？请深思Leanpub，该服务可将你的Markdown格式的文件转化为电子书，Leanpub以PDF、EPUB和MOBI文件格式输出你的图书，如果你要创建纸版书籍，可以将PDF文件上传到类似Kindle Direct Publishing之类的服务提供商处。要了解有关使用Markdown编写和自行出版书籍的更多信息请阅读<a target="_blank" rel="noopener" href="https://medium.com/techspiration-ideas-making-it-happen/how-i-wrote-and-published-my-novel-using-only-open-source-tools-5cdfbd7c00ca">此博文</a>。</p>
+<h2 id="演示文稿"><a href="#演示文稿" class="headerlink" title="演示文稿"></a>演示文稿</h2><p>信不信由你，你可以将Markdown格式的文件转化为演示文稿。在Markdown中创建演示文稿需要一点时间来适应，但是你一旦掌握了它，你就能体会到比使用PowerPoint或Keynote之类的应用程序更快、更容易。Remark（Github仓库）和Cleaver（Github仓库）一样，是一种基于浏览器的、流行的Markdown幻灯片工具。如果你使用的是Mac，并且希望安装一个应用程序来使用的话，请试试Deckset或Marked。</p>
+<h2 id="邮件"><a href="#邮件" class="headerlink" title="邮件"></a>邮件</h2><p>如果你需要发送大量电子邮件，并且对大多数电子邮件提供商网站上可用的格式设置控件感到厌倦，那么你将很高兴地发现有一种使用Markdown编写电子邮件的简便方法：「Markdown Here」是一个免费，开源的浏览器扩展程序，可将Markdown格式的文本转换为可用于发送的HTML。</p>
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>Markdown非常适合技术文档，像Github这样的公司越来越多地转向使用Markdown来创建其文档。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>XpX</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2022 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>你将灵魂如何安放？</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Study/"># Study</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2022/10/30/MWebLibrary/docs/16671346116283/"></a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© XpX | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
